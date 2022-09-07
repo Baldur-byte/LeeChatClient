@@ -1,0 +1,29 @@
+syntax = "proto3";
+package Protobuf;
+
+message PlayerInfo{
+  string uuid = 1;
+  string name = 2;
+  string iconUrl = 3;
+  string password = 4;
+}
+
+//更新角色信息
+message UpdateInfoCS{
+  PlayerInfo Info = 1;
+}
+
+//更新角色信息返回
+message UpdateInfoSC{
+  int32 code = 1;
+}
+
+//获取角色信息
+message GetPlayerInfosCS{
+  string uuid = 1;
+}
+
+//获取角色信息返回
+message GetPlayerInfosSC{
+  repeated PlayerInfo List = 1;
+}

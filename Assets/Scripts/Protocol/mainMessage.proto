@@ -1,0 +1,14 @@
+syntax = "proto3";
+package Protobuf;
+
+message SendToOne{
+  string FromId = 1;
+  string ToId = 2;
+  string message = 3;
+}
+
+message SendToGroup{
+  string FromId = 1;
+  string ToRoomId = 2;
+  string message = 3;
+}

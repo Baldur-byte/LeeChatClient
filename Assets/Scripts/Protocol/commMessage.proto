@@ -1,0 +1,7 @@
+syntax = "proto3";
+package Protobuf;
+
+//主动推送错误码消息
+message ErrorCode{
+  int32 Code = 1;  //错误码
+}

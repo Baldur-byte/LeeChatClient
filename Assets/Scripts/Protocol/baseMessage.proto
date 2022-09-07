@@ -1,0 +1,42 @@
+syntax = "proto3";
+package Protobuf;
+import "playerMessage.proto";
+
+//登录C->S
+message LoginCS{
+  string uuid = 1;
+  string password = 2;
+}
+
+//登录返回S->C
+message LoginSC{
+  PlayerInfo Info = 1;
+  bool result = 2;
+}
+
+//注册C->S
+message RegisterCS{
+  string uuid = 1;
+  string password = 2;
+  string name = 3;
+}
+
+//注册返回S->C
+message RegisterSC{
+  PlayerInfo Info = 1;
+  bool result = 2;
+}
+
+//心跳C->S
+message Ping{}
+
+//心跳返回S->C
+message Pong{}
+
+//断线重连C->S
+message ConnectionCS{
+  string uuid = 1;
+}
+
+//断线重连S->C
+message ConnectionSC{}
