@@ -56,14 +56,20 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Adaptor\ChatContentAdaptor.cs" />
     <Compile Include="Assets\Scripts\Network\MessageID.cs" />
+    <Compile Include="Assets\Scripts\Item\ChatMainItem.cs" />
+    <Compile Include="Assets\Scripts\Item\FriendItem.cs" />
     <Compile Include="Assets\Scripts\Protocol\MainMessage.cs" />
+    <Compile Include="Assets\Scripts\MessageList.cs" />
     <Compile Include="Assets\ThridPart\Protobuf3.20\include\google\protobuf\Any.cs" />
     <Compile Include="Assets\ThridPart\Protobuf3.20\include\google\protobuf\Struct.cs" />
     <Compile Include="Assets\Scripts\UI\LoginPanel.cs" />
     <Compile Include="Assets\ThridPart\Protobuf3.20\include\google\protobuf\Type.cs" />
+    <Compile Include="Assets\Scripts\Item\PrintMessage.cs" />
     <Compile Include="Assets\Scripts\MonoSingleton.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\Item\ChatItem.cs" />
     <Compile Include="Assets\ThridPart\Protobuf3.20\include\google\protobuf\compiler\Plugin.cs" />
     <Compile Include="Assets\Scripts\GlobalEnum.cs" />
     <Compile Include="Assets\ThridPart\Protobuf3.20\include\google\protobuf\Api.cs" />
@@ -75,6 +81,9 @@
     <Compile Include="Assets\ThridPart\Protobuf3.20\include\google\protobuf\Wrappers.cs" />
     <Compile Include="Assets\ThridPart\Protobuf3.20\include\google\protobuf\Descriptor.cs" />
     <Compile Include="Assets\Scripts\Network\SocketManager.cs" />
+    <Compile Include="Assets\Scripts\Item\SelfInfoItem.cs" />
+    <Compile Include="Assets\Scripts\ChatManager.cs" />
+    <Compile Include="Assets\Scripts\Adaptor\ChatScrollRectAdaptor.cs" />
     <Compile Include="Assets\Scripts\Protocol\PlayerMessage.cs" />
     <Compile Include="Assets\Scripts\Network\NetworkUtils.cs" />
     <Compile Include="Assets\Scripts\Network\MessageEvent.cs" />
@@ -85,6 +94,7 @@
     <Compile Include="Assets\Scripts\UI\RegisterPanel.cs" />
     <Compile Include="Assets\ThridPart\Protobuf3.20\include\google\protobuf\SourceContext.cs" />
     <Compile Include="Assets\ThridPart\Protobuf3.20\include\google\protobuf\Duration.cs" />
+    <Compile Include="Assets\Scripts\FriendListManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugin\Protobuf\Google.Protobuf.dll" />

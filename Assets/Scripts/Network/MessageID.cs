@@ -22,11 +22,15 @@
 
     UpdateInfoSC = 10102,
 
-    GetPlayerInfosCS = 10111,
+    GetPlayerInfoCS = 10111,
 
-    GetPlayerInfosSC = 10112,
+    GetPlayerInfoSC = 10112,
 
     SendToOne = 10201,
 
     SendToGroup = 10301,
+
+    GetFriendListCS = 10401,
+
+    GetFriendListSC = 10402,
 }

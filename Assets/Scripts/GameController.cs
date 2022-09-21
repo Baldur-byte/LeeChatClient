@@ -2,6 +2,7 @@ using Manager;
 using UnityEngine;
 using UnityEngine.UI;
 using Protobuf;
+using System.Collections.Generic;
 
 public class GameController : MonoSingleton<GameController>
 {
@@ -13,6 +14,8 @@ public class GameController : MonoSingleton<GameController>
     public Transform MainPanel;
 
     public Player Player { get; private set; }
+
+    public List<Player> FriendsList { get; private set; }
 
     protected override void Awake()
     {
@@ -49,6 +52,7 @@ public class GameController : MonoSingleton<GameController>
                 LoginPanel.gameObject.SetActive(false);
                 RegisterPanel.gameObject.SetActive(false);
                 MainPanel.gameObject.SetActive(true);
+                OpenMainPanel();
                 break;
             default:
                 LoginPanel.gameObject.SetActive(true);
@@ -61,5 +65,20 @@ public class GameController : MonoSingleton<GameController>
     public void InitPlayer(PlayerInfo info)
     {
         Player = new Player(info);
+    }
+
+    public Player GetPlayerById(string id)
+    {
+        foreach(Player p in FriendsList)
+        {
+            if (p.Uuid() == id) return p;
+        }
+        return new Player();
+    }
+
+    private void OpenMainPanel()
+    {
+        ChatManager.Instance.Init();
+        FriendListManager.Instance.Init();
     }
 }

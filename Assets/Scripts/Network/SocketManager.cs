@@ -20,6 +20,11 @@ namespace Manager
             SocketClient.Enqueue(id, message.ToByteArray());
         }
 
+        public void Register(MessageID id, CallBack callBack)
+        {
+            SocketClient.Register(id, callBack);
+        }
+
         #region 特殊事件
         //心跳
         public static void _Pong(byte[] bytes)

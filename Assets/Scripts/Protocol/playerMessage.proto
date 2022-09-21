@@ -19,11 +19,21 @@ message UpdateInfoSC{
 }
 
 //获取角色信息
-message GetPlayerInfosCS{
+message GetPlayerInfoCS{
   string uuid = 1;
 }
 
 //获取角色信息返回
-message GetPlayerInfosSC{
-  repeated PlayerInfo List = 1;
+message GetPlayerInfoSC{
+  PlayerInfo Info = 1;
+}
+
+//获取好友信息
+message GetFriendListCS{
+  string uuid = 1;
+}
+
+//获取角色信息返回
+message GetFriendListSC{
+  repeated string friendList = 1;
 }

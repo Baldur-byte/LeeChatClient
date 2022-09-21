@@ -3,6 +3,8 @@ using System.Net;
 using Google.Protobuf;
 using System;
 using Network;
+using System.Data;
+
 public static class NetworkUtils
 {
     public static string GetLocalIPv4()
@@ -42,6 +44,12 @@ public static class NetworkUtils
     public static DateTime GetCurrentTime()
     {
         return DateTime.UtcNow;
+    }
+
+    public static DateTime GetTimeBy(long timestamp)
+    {
+        DateTime dateTime = TimeZoneInfo.ConvertTimeToUtc(new DateTime(timestamp));
+        return dateTime;
     }
 
     public static IMessage GetProto(IMessage message, byte[] bytes)
